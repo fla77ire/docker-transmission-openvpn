@@ -217,12 +217,12 @@ checkDNS() {
   else
     log "INFO: OVPN: DNS resolution ok"
   fi
-  ret=$(ping -c2 ${nordvpn_dl} 2>&1)||true
-  if [[ $ret =~ \ 0%\ packet\ loss ]]; then
-    log "INFO: OVPN: ok, configurations download site reachable"
-  else
-    fatal_error "ERROR: OVPN: cannot ping ${nordvpn_cdn}, network or internet unavailable. Cannot download NORDVPN configuration files"
-  fi
+  #ret=$(ping -c2 ${nordvpn_dl} 2>&1)||true
+  #if [[ $ret =~ \ 0%\ packet\ loss ]]; then
+    #log "INFO: OVPN: ok, configurations download site reachable"
+  #else
+    #fatal_error "ERROR: OVPN: cannot ping ${nordvpn_cdn}, network or internet unavailable. Cannot download NORDVPN configuration files"
+  #fi
 }
 
 # Main
